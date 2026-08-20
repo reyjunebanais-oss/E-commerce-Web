@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/STYLES/bootstrap.min.css">
+    <script src="function/login.js" defer></script>
+</head>
+<style>
+    body{
+        background:url('logos/header.png') no-repeat;
+        background-size:cover;
+        background-position:center;
+    }
+  .card1{
+      margin-left:60px;
+      background-color:white;
+      height:645px;
+      width:460px;
+      
+  }
+  .logo{
+      width:100%;
+      height:130px;
+      margin-bottom:30px;
+  }
+</style>
+<body class="d-flex justify-content-start align-items-center vh-100 ">
+<div class="  p-5  rounded-4 card1 " >
+    <div class="logo">
+        <img src="logos/logo.png" alt="" width="100%" height="100%"></img>
+    </div>
+    <h1 class="text-center fw-bold " style="font-size:45px">lo<span style="color:rgb(72, 90, 222) ;">gin</span></h1>
+    <div>
+      <label for="UserName" class="form-label mt-4">User name</label>
+      <input type="text" class="form-control" id="UserName" aria-describedby="emailHelp" placeholder="Enter Username">
+      <p id="display1"></p>
+    </div>
+    <div>
+      <label for="Password" class="form-label mt-4">Password</label>
+      <input type="Password" class="form-control" id="Password" placeholder="Password" autocomplete="off">
+        <p id="display2"></p>
+    </div>
+    <div class="text-center">
+        <P id="display3"></P>
+        <p>dont have an account?<a href="signUp.html"> sign in</a></p>
+    <button id="buttons" onclick="login()"  style="background-color:blue; border:none"type="button" class=" p-2 fw-bold btn-info w-50 mt-3 rounded-5">login</button>
+    </div>
+</div>
+</body>
+<script>
+    
+</script>
+</html>

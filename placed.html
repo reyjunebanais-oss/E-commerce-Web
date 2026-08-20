@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Order Placed</title>
+
+    <link
+        rel="stylesheet"
+        href="STYLES/bootstrap.css">
+
+    <style>
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f5f9fd;
+            font-family: Arial, sans-serif;
+        }
+
+        .success-box {
+            width: 90%;
+            max-width: 550px;
+            background: white;
+            padding: 45px 30px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .check {
+            width: 80px;
+            height: 80px;
+            margin: auto;
+            border-radius: 50%;
+            background: #168bd8;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 45px;
+        }
+
+        h1 {
+            margin-top: 25px;
+            color: #123b68;
+        }
+
+        p {
+            color: #64748b;
+        }
+
+        .order-number {
+            margin: 20px 0;
+            padding: 15px;
+            background: #eef7ff;
+            border-radius: 8px;
+            color: #123b68;
+            font-weight: bold;
+        }
+
+        .btn-home {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 13px 30px;
+            background: #0878c9;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            font-weight: bold;
+        }
+
+        .btn-home:hover {
+            background: #0566ac;
+            color: white;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="success-box">
+
+        <div class="check">
+            ✔
+        </div>
+
+        <h1>Order Placed Successfully!</h1>
+
+        <p>
+            Thank you for your order.
+            Your order has been received and is being processed.
+        </p>
+
+        <div class="order-number">
+
+            Order #<span id="orderNumber"></span>
+
+        </div>
+
+        <a
+            href="Dashboard.html"
+            class="btn-home">
+
+            Continue Shopping
+
+        </a>
+
+    </div>
+
+
+    <script>
+
+        // Generate simple order number
+
+        const orderNumber =
+            "PH-" +
+            Math.floor(
+                100000 + Math.random() * 900000
+            );
+
+
+        document.getElementById(
+            "orderNumber"
+        ).textContent = orderNumber;
+
+
+        // Save order number
+
+        localStorage.setItem(
+            "orderNumber",
+            orderNumber
+        );
+
+    </script>
+
+</body>
+
+</html>

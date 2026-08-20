@@ -1,0 +1,794 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="STYLES/Dashboard.css">
+    <link rel="stylesheet" href="STYLES/bootstrap.css">
+    <link rel="stylesheet" href="STYLES/categories.css">
+    <link rel="stylesheet" href="STYLES/Components.css">
+    <link rel="stylesheet" href="STYLES/cart.css">
+
+   <!--javacript-->
+    <script src="function/search.js"></script>
+    <script src="function/cart.js" defer></script>
+    <script src="/function/automatio.js" defer></script>
+       <script src="/function/categories.js" defer></script>
+</head>
+<style>
+   html{
+      scroll-behavior: smooth;
+   }
+   #cartAni{
+      transition:all .3s ease-in-out;
+   }
+   #cartAni:hover{
+      transform: scale(1.1 );
+   }
+</style>
+<body>
+    <nav id="home">
+        <div class="logo">
+        <img  src="logos/logo.png" height="90px" width="230px" >
+        </div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#components">Components</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#categories">Learn</a></li>          
+        </ul>                                               
+         
+        
+       <div id="cart-icon">
+    <img id="cartAni" style="cursor: pointer;"
+         src="logos/cart.png"
+         width="70px"
+         height="50px">
+
+    <span id="cart-count">0</span>
+</div>
+         
+    </nav>
+    <div id="cart">
+        <h2 class="cart-title fw-bold  ">🛒  Your Cart</h2> 
+        <div class="cart-content"> 
+            <!--
+            <div class="cart-box"> 
+              <img src="passiveImage/1.png" class="cart-img"> <div class="cart-detail"> 
+           <h2 class="cart-product-title"> Resistor</h2> 
+       <span class="cart-price" >$100</span>
+        <div class="cart-quantity"> 
+           <button id="decrement">-</button>
+            <span class="number">1</span> 
+            <button id="increment">+</button>
+        </div>
+      
+       </div>
+       
+        <i class="bi bi-trash3-fill" id="cart-remove"></i>
+         </div>
+         -->
+         </div> 
+         <div  class="total"> 
+             <div class="total-title">Total</div> 
+             <div class="total-price">$0</div> 
+             </div> 
+          
+             <button class="btn-buy" id="checkout">Place Order</button> 
+             
+         <i class="bi bi-x-lg" id="cart-close"></i>
+            
+      
+
+      </div>
+    <header>
+        <div class="introduction">
+            <div class="pos">
+            <h1>Explore.Learn.</h1>
+            <h1><span>the future.</span></h1>
+            <p>Discovery a wide range of electronic components for your projects and innovation</p>
+            <div class="buttons">
+              <a href="#categories"><button type="button" class="btn btn-info px-5 align-items-center ">shop now</button></a>
+            <button type="button" class="btn btn-outline-info px-5 ms-4">Learn now</button>
+            </div>
+            </div>
+            <div class="SearchBar">
+                <div class="container mt-1">
+    <div class="input-group ms-5">
+        <span class="input-group-text">🔍</span>
+        <input 
+            id="search"
+            onkeyup="search_function()"
+            type="text" 
+            class="form-control" 
+            placeholder="Search electronics...">
+        
+                  </div>
+              </div>
+            </div> 
+        </div>
+    </header>
+<div class="Categories mt-2 "><h1>Categories</h1></div>
+<div class="CategoriesContainer" id="categories">
+
+ <div class="card">
+    <img id="modules" src="categories/modules.png" height="100%" width="100%">
+ </div>
+ <div class="card">
+    <img id="circuits" src="categories/circuits.png" height="100%" width="100%">
+ </div>
+ <div class="card">
+    <img id="connector" src="categories/connector.png" height="100%" width="100%">
+ </div>
+ <div class="card">
+    <img id="microcontroller" src="categories/microcontrollers.png" height="100%" width="100%">
+ </div>
+ <div class="card">
+     <img id="passive" src="categories/passive.png" height="100%" width="100%">
+ </div>
+ <div class="card">
+   <img id="sensor" src="categories/Sensors.png" height="100%" width="100%">
+ </div>
+ <div class="card">
+    <img id="simiconductors" src="categories/simiconductors.png" height="100%" width="100%">
+ </div>
+</div>
+<div class="Categories mt-2 "><h1>Components</h1></div>
+<div class="Components" id="components">
+     <!-- Add this new element for the "Not Found" message -->
+<div id="no-results" style="display: none; text-align: center; margin-top: 20px; position: fixed; top: 50%; left: 40%; ">
+  <h2>No products found</h2>
+  <p>Try searching for something else.</p>
+</div>
+    <!-- Resistor -->
+   
+  <div class="card1" data-category="passive" >
+       <div class="imageContainer">
+        <a href="passive.html"><img src="passiveImage/1.png" width = "100%"  heigth="100%"></a>
+        </div>
+        <h1 class="Product-Title">Resistor</h1>
+        <p>Passive</p>
+    
+    <div class="addCart">
+    <h1 class="price">₱27</h1>
+    <img src="logos/cart.png" width="50px" height="40px">
+</div>
+    </div>
+
+
+    <!-- Capacitor -->
+    <div class="card1" data-category="passive" >
+       <div class="imageContainer" style="height: 170px;">
+        <a href="passive.html"><img src="passiveImage/2.png" width = "100%"  heigth="100%"></a>
+        </div>
+        <h1 class="Product-Title">Capacitor</h1>
+        <p>Passive</p>
+    
+    <div class="addCart">
+    <h1 class="price">₱27</h1>
+    <img src="logos/cart.png" width="50px" height="40px">
+</div>
+    </div>
+    
+    <!-- inductor -->
+    <div class="card1" data-category="passive" >
+       <div class="imageContainer" style="height: 170px;">
+       <a href="passive.html"><img src="passiveImage/3.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">Inductor</h1>
+        <p>Passive</p>
+       
+       <div class="addCart">
+    <h1 class="price">₱97</h1>
+    <img src="logos/cart.png" width="50px" height="40px">
+</div>
+    </div>
+
+     <!-- Tranformer -->
+    <div class="card1" data-category="passive">
+       <div class="imageContainer" style="height: 170px;">
+      <a href="passive.html"><img src="passiveImage/4.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">Transformer</h1>
+        <p>Passive</p>
+    <div class="addCart">
+    <h1 class="price">₱27</h1>
+    <img src="logos/cart.png" width="50px" height="40px">
+</div>
+    </div>
+    
+    
+     <!-- potentmometer -->
+    <div class="card1" data-category="passive">
+       <div class="imageContainer" style="height: 170px;">
+      <a href="passive.html"> <img src="/passiveImage/5.png" width = "100%"  heigth="100%"></img></a>    
+        </div>
+        <h1 class="Product-Title">Potentmometer</h1>
+        <p>Passive</p>
+       <div class="addCart">
+       <h1 class="price" >₱69</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>
+    
+
+   <!-- Diode -->
+    <div class="card1" data-category="semiconductors">
+       <div class="imageContainer">
+      <a href="simeconductor.html"><img class="rounded-circle" src="/semiconductor/1.png" width = "100%"  heigth="100%"></a>
+        </div>
+        <h1 class="Product-Title">Diode</h1>
+        <p>Semiconductor</p>
+       <div class="addCart">
+       <h1 class="price" >₱79</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>
+    
+       <!-- CSR -->
+    <div class="card1" data-category="semiconductors">
+       <div class="imageContainer">
+      <a href="simeconductor.html">  <img class="rounded-circle" src="/semiconductor/2.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">CSR</h1>
+        <p>Semiconductor</p>
+       <div class="addCart">
+       <h1 class="price" >₱19</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>
+    
+       <!-- photodiode -->
+    <div class="card1" data-category="semiconductors">
+       <div class="imageContainer">
+      <a href="simeconductor.html">  <img class="rounded-circle" src="/semiconductor/3.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">PhotoDiode</h1>
+        <p>Semiconductor</p>
+       <div class="addCart">
+       <h1 class="price" >₱92</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>
+    
+       <!-- MOSFET -->
+    <div class="card1" data-category="semiconductors">
+       <div class="imageContainer">
+      <a href="simeconductor.html">  <img class="rounded-circle" src="/semiconductor/4.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">MosFet</h1>
+        <p>Semiconductor</p>
+       <div class="addCart">
+       <h1 class="price" >₱99</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>
+    
+    <!-- Transistor BJT -->
+    <div class="card1" data-category="semiconductors">
+       <div class="imageContainer">
+      <a href="simeconductor.html"> <img class="rounded-circle" src="/semiconductor/5.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">Transistor BJT</h1>
+        <p>Semiconductor</p>
+       <div class="addCart">
+       <h1 class="price" >₱79</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>
+    
+    <!-- LED -->
+    <div class="card1" data-category="semiconductors">
+       <div class="imageContainer">
+       <a href="simeconductor.html"> <img class="rounded-circle" src="/semiconductor/6.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">LED</h1>
+        <p>Semiconductor</p>
+       <div class="addCart">
+       <h1 class="price" >₱59</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>
+    
+     <!-- LED -->
+    <div class="card1" data-category="semiconductors">
+       <div class="imageContainer">
+      <a href="simeconductor.html"> <img class="rounded-circle" src="/semiconductor/7.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">Zener Diode</h1>
+        <p>Semiconductor</p>
+       <div class="addCart">
+       <h1 class="price" >₱59</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>
+    
+    <!-- 7400 logic IC -->
+    <div class="card1" data-category="circuits">
+       <div class="imageContainer">
+     <a href="intergrated.html">  <img class="rounded-circle" src="/integratedCircuit/2.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">7400 logic IC</h1>
+        <p>integrated circuit</p>
+       <div class="addCart">
+       <h1 class="price" >₱439</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>
+    
+     <!-- IDC IC -->
+    <div class="card1"  data-category="circuits">
+       <div class="imageContainer">
+      <a href="intergrated.html">  <img class="rounded-circle" src="/integratedCircuit/1.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">IDC IC</h1>
+        <p>integrated circuit</p>
+       <div class="addCart">
+       <h1 class="price" >₱89</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>
+    
+       <!-- 55 timer IC -->
+    <div class="card1"  data-category="circuits">
+       <div class="imageContainer">
+      <a href="intergrated.html">  <img class="rounded-circle" src="/integratedCircuit/3.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">55 timer IC</h1>
+        <p>integrated circuit</p>
+       <div class="addCart">
+       <h1 class="price" >₱29</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>
+    
+    <!-- LM358 op-amp -->
+    <div class="card1"  data-category="circuits">
+       <div class="imageContainer">
+       <a href="intergrated.html">   <img class="rounded-circle" src="/integratedCircuit/4.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">LM358 op-amp</h1>
+        <p>integrated circuit</p>
+       <div class="addCart">
+       <h1 class="price" >₱249</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>
+    
+    <!-- motor-driver IC -->
+    <div class="card1"  data-category="circuits">
+       <div class="imageContainer">
+       <a href="intergrated.html">   <img class="rounded-circle" src="/integratedCircuit/5.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">Motor Driver IC</h1>
+        <p>integrated circuit</p>
+       <div class="addCart">
+       <h1 class="price" >₱429</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>
+    
+      <!-- EEPROM -->
+    <div class="card1"  data-category="circuits">
+       <div class="imageContainer">
+        <a href="intergrated.html">  <img class="rounded-circle" src="/integratedCircuit/6.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">EEPROM</h1>
+        <p>integrated circuit</p>
+       <div class="addCart">
+       <h1 class="price" >₱179</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>
+  
+  <!-- PIR motion sensor -->
+    <div class="card1" style="height: 300px;" data-category="sensor">
+       <div class="imageContainer">
+      <a href="sensor.html">  <img class="rounded-circle" src="/sensor/1.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">PIR motion sensor</h1>
+        <p>sensor</p>
+       <div class="addCart">
+       <h1 class="price" >₱119</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>  
+    
+    <!-- LDR light sensor-->
+  
+    <div class="card1" data-category="sensor">
+       <div class="imageContainer">
+        <a href="sensor.html">  <img class="rounded-circle" src="/sensor/2.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">LDR light sensor</h1>
+        <p>sensor</p>
+       <div class="addCart">
+       <h1 class="price" >₱191</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>  
+    
+    <!-- Humidity sensor -->
+    <div class="card1" data-category="sensor">
+       <div class="imageContainer">
+        <a href="sensor.html">  <img class="rounded-circle" src="/sensor/3.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">Humidity sensor</h1>
+        <p>sensor</p>
+       <div class="addCart">
+       <h1 class="price" >₱519</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>  
+    
+     <!-- Ultrasonic sensor-->
+    <div class="card1" style="height: 300px; " data-category="sensor">
+       <div class="imageContainer">
+        <a href="sensor.html">  <img class="rounded-circle" src="/sensor/4.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">Ultrasonic sensor</h1>
+        <p>sensor</p>
+       <div class="addCart">
+       <h1 class="price" >₱891</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>  
+    
+    <!-- IR sensor -->
+    <div class="card1" data-category="sensor">
+       <div class="imageContainer">
+        <a href="sensor.html">  <img class="rounded-circle" src="/sensor/5.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">IR sensor</h1>
+        <p>sensor</p>
+       <div class="addCart">
+       <h1 class="price" >₱819</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>  
+    
+    <!-- gas sensor-->
+    <div class="card1" data-category="sensor">
+       <div class="imageContainer">
+        <a href="sensor.html">  <img class="rounded-circle" src="/sensor/6.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">Gas sensor</h1>
+        <p>sensor</p>
+       <div class="addCart">
+       <h1 class="price" >₱891</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>  
+    
+    <!-- temperature sensor-->
+    <div class="card1 px-4" style="height:300px" data-category="sensor">
+       <div class="imageContainer">
+        <a href="sensor.html">  <img class="rounded-circle" src="/sensor/7.png" width = "100%"  heigth="100%"></img></a>   
+        </div>
+        <h1 class="Product-Title">Temperature sensor</h1>
+        <p>sensor</p>
+       <div class="addCart">
+       <h1 class="price" >₱891</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>  
+    
+     <!-- Arduino uno-->
+    <div class="card1" style="height:300px" data-category="microcontroller">
+       <div class="imageContainer" style="display:flex; justify-content:center">
+    <a href="microntroller.html"><img class="rounded-top" src="/microntroller/1.png" width = "150px"  heigth="50px"></img></a>
+        </div>
+        <h1 class="Product-Title">Arduino Uno</h1>
+        <p>microcontroller</p>
+       <div class="addCart">
+       <h1 class="price" >₱800</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>  
+    
+     <!-- Arduino nano-->
+    <div class="card1" style="height:300px" data-category="microcontroller" >
+       <div class="imageContainer">
+       <a href="microntroller.html"> <img style="background-color: red;"  class="rounded-circle" src="/microntroller/2.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">Arduino nano</h1>
+        <p>microcontroller</p>
+       <div class="addCart">
+       <h1 class="price" >₱89</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>  
+    
+    
+    <div class="card1" style="height:300px" data-category="microcontroller">
+       <div class="imageContainer" style="display:flex; justify-content:center">
+    <a href="microntroller.html">   <img class="rounded-top" src="/microntroller/3.jpg" width = "150px"  heigth="50px"></img></a>
+        </div>
+        <h1 class="Product-Title">ESP 8266</h1>
+        <p>microcontroller</p>
+       <div class="addCart">
+       <h1 class="price" >₱800</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>  
+    
+    <div class="card1" style="height:285px" data-category="microcontroller">
+       <div class="imageContainer" style="display:flex; justify-content:center">
+  <a href="microntroller.html"> <img class="rounded-top" src="/microntroller/4.jpg" width = "150px"  heigth="50px"></img></a>
+        </div>
+        <h1 class="Product-Title">RP2040</h1>
+        <p>microcontroller</p>
+       <div class="addCart">
+       <h1 class="price" >₱8100</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>  
+    
+    <div class="card1" style="height:280px" data-category="microcontroller">
+       <div class="imageContainer" style="display:flex; justify-content:center; height: 180px;">
+    <a href="microntroller.html">   <img class="rounded-top" src="/microntroller/5.jpg" width = "150px"  heigth="10px"></img></a>
+        </div>
+        <h1 class="Product-Title">ATmege328P </h1>
+        <p>microcontroller</p>
+       <div class="addCart">
+       <h1 class="price" >₱8001</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>  
+    
+      <div class="card1" style="height:280px" data-category="microcontroller">
+       <div class="imageContainer" style="display:flex; justify-content:center;">
+  <a href="microntroller.html">     <img class="rounded-top" src="/microntroller/6.jpg" width = "150px"  heigth="10px"></img></a>
+        </div>
+        <h1 class="Product-Title">STM 32 </h1>
+        <p>microcontroller</p>
+       <div class="addCart">
+       <h1 class="price" >₱81</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>  
+    
+    <div class="card1" style="height:280px" data-category="microcontroller">
+       <div class="imageContainer" style="display:flex; justify-content:center">
+  <a href="microntroller.html">     <img class="rounded-top" src="/microntroller/7.jpg" width = "150px"  heigth="50px"></img></a>
+        </div>
+        <h1 class="Product-Title">ESP 32</h1>
+        <p>microcontroller</p>
+       <div class="addCart">
+       <h1 class="price" >₱80</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>  
+    
+     <!--bluetooth modules-->
+    <div class="card1" data-category="modules">
+       <div class="imageContainer">
+     <a href="modules.html" ><img class="rounded-circle" src="/modules/1.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">Bluetooth </h1>
+        <p>Modules</p>
+       <div class="addCart">
+       <h1 class="price" >₱10</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>  
+    
+     <!--CD card Modules  -->
+    <div class="card1" data-category="modules">
+       <div class="imageContainer">
+     <a href="modules.html" >   <img class="rounded-circle" src="/modules/2.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">CD Modules</h1>
+        <p>Modules</p>
+       <div class="addCart">
+       <h1 class="price" >₱19</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>  
+    
+    <!--OLED display Modules-->
+    <div class="card1" data-category="modules">
+       <div class="imageContainer">
+     <a href="modules.html"><img class="rounded-circle" src="/modules/3.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">OLED display</h1>
+        <p>Modules</p>
+       <div class="addCart">
+       <h1 class="price" >₱69</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>  
+    
+    <!--Wifi modules-->
+    <div class="card1" data-category="modules">
+      <div class="imageContainer">
+  <a href="modules.html"> <img class="rounded-circle" src="/modules/4.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">Wifi modules</h1>
+        <p>modules</p>
+       <div class="addCart">
+       <h1 class="price" >₱79</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>  
+    
+    <!--GPS modules-->
+    <div class="card1" data-category="modules">
+       <div class="imageContainer">
+   <a href="modules.html"> <img class="rounded-circle" src="/modules/5.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">GPS modules</h1>
+        <p>modules</p>
+       <div class="addCart">
+       <h1 class="price" >  ₱88  </h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>  
+    
+    <!--Motor Driver modules-->
+    <div class="card1" data-category="modules">
+       <div class="imageContainer">
+  <a href="modules.html"> <img class="rounded-circle" src="/modules/6.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">Driver Modules</h1>
+        <p>modules</p>
+       <div class="addCart">
+       <h1 class="price" >₱88</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>  
+    
+    <!--Relay modules-->
+    <div class="card1" data-category="modules">
+       <div class="imageContainer">
+<a href="modules.html" > <img class="rounded-circle" src="/modules/7.png" width = "100%"  heigth="100%"></img> </a>
+        </div>
+        <h1 class="Product-Title">Relay modules</h1>
+        <p>modules</p>
+       <div class="addCart">
+       <h1 class="price" >₱49</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>  
+    
+     <!--USB connector-->
+    <div class="card1" data-category="connector">
+       <div class="imageContainer">
+    <a href="connector.html"><img class="rounded-circle" src="/connector/1.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">USB connector</h1>
+        <p>connector</p>
+       <div class="addCart">
+       <h1 class="price" >₱99</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>  
+    
+     <!--JST connector-->
+    <div class="card1" data-category="connector">
+       <div class="imageContainer">
+  <a href="connector.html"> <img class="rounded-circle" src="/connector/2.png" width = "100%"  heigth="100%"></img> </a>
+        </div>
+        <h1 class="Product-Title">JST connector</h1>
+        <p>connector</p>
+       <div class="addCart">
+       <h1 class="price" >₱99</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>  
+    
+    <!--PIN header-->
+    <div class="card1" data-category="connector">
+       <div class="imageContainer">
+ <a href="connector.html"><img class="rounded-circle" src="/connector/3.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">PIN header</h1>
+        <p>connector</p>
+       <div class="addCart">
+       <h1 class="price" >₱99</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>  
+    
+       
+    <!--Barrier jack-->
+    <div class="card1" data-category="connector">
+       <div class="imageContainer">
+  <a href="connector.html">  <img class="rounded-circle" src="/connector/4.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">Barrier jack</h1>
+        <p>connector</p>
+       <div class="addCart">
+       <h1 class="price" >₱99</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>  
+    
+           
+    <!--Barrier jack-->
+    <div class="card1" data-category="connector">
+       <div class="imageContainer">
+  <a href="connector.html"><img class="rounded-circle" src="/connector/5.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">Terminal block</h1>
+        <p>connector</p>
+       <div class="addCart">
+       <h1 class="price" >₱99</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>  
+    
+    <!--HDMI-->
+    <div class="card1" data-category="connector">
+       <div class="imageContainer">
+ <a href="connector.html"> <img class="rounded-circle" src="/connector/6.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">HDMI connector</h1>
+        <p>connector</p>
+       <div class="addCart">
+       <h1 class="price" >₱929</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>  
+    
+    <!--Rj45-->
+    <div class="card1" data-category="connector">
+       <div class="imageContainer">
+ <a href="connector.html"> <img class="rounded-circle" src="/connector/7.png" width = "100%"  heigth="100%"></img></a>
+        </div>
+        <h1 class="Product-Title">RJ45 connector</h1>
+        <p>connector</p>
+       <div class="addCart">
+       <h1 class="price" >₱992</h1>
+         <img  id="cart-icon" src="logos/cart.png" width = "50px" heigth="50px">
+         </img>
+       </div>
+    </div>  
+    
+    
+</div>
+
+</body>
+</html>

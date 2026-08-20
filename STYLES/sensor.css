@@ -1,0 +1,95 @@
+ * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f6f8;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: min(90%, 1000px);
+            margin: auto;
+            padding: 30px 0 60px;
+        }
+
+        .main-title {
+            text-align: center;
+            color: #005bbb;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .intro {
+            background: white;
+            padding: 22px 20px;
+            border-radius: 7px;
+            margin-bottom: 25px;
+        }
+
+        .intro h2 {
+            color: #005bbb;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .intro p {
+            font-size: 14px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .card {
+            background: white;
+            padding: 18px 15px;
+            border-radius: 7px;
+            border-top: 3px solid #0066cc;
+            min-height: 170px;
+            box-shadow: 0 2px 6px rgba(0,0,0,.05);
+        }
+
+        .card h3 {
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            font-size: 13px;
+            color: #444;
+        }
+
+        @media (max-width: 700px) {
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .main-title {
+                font-size: 24px;
+            }
+        }
